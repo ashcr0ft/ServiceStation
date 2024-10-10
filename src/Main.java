@@ -1,20 +1,19 @@
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
-        Service records = new ServiceStation();
+        Service service = new ServiceStation();
+        Car car = new Car("car1", 4);
+        Car car2 = new Car("car1", 4);
+        Bicycle bicycle = new Bicycle("bicycle", 2);
+        Bicycle bicycle2 = new Bicycle("bicycle2", 2);
+        Truck truck = new Truck("truck", 6);
+        Truck truck2 = new Truck("truck2", 8);
 
-        records.recordService("Аист", 2, "Bicycle");
-        records.recordService("Дружок", 2, "Bicycle");
-        records.recordService("Ваз 2109", 4, "Car");
-        records.recordService("Ford Focus", 4, "Car");
-        records.recordService("DAF XF", 6, "Truck");
-        records.recordService("Камаз", 8, "Truck");
-
-        records.service();
-        records.recordService("Камаз", 8, "Truck");
-
-        records.service("Камаз");
+        service.doService(bicycle);
+        service.doService(bicycle2);
+        service.doService(car);
+        service.doService(car2);
+        service.doService(truck);
+        service.doService(truck2);
 
     }
 }
