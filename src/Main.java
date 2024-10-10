@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         Service records = new ServiceStation();
@@ -10,6 +12,8 @@ public class Main {
         records.recordService("Камаз", 8, "Truck");
 
         records.service();
+        records.recordService("Камаз", 8, "Truck");
+
         records.service("Камаз");
 
     }
